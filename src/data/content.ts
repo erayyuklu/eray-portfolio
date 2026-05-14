@@ -37,6 +37,7 @@ export const projects = [
 		title: "Performance Evaluation of LLM Inference Frameworks",
 		label: "2025 — 2026",
 		body: "Senior Design Project at Boğaziçi University. Benchmarked vLLM across quantizations (FP16, FP8, INT4) and model types under concurrent load; built an end-to-end pipeline with Locust, Prometheus, and Grafana on GKE.",
+		link: "https://github.com/erayyuklu/PERFORMANCE-EVALUATIONS-OF-LLM-INFERENCE-FRAMEWORKS",
 	},
 ];
 
