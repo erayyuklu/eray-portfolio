@@ -1,0 +1,128 @@
+---
+import Badge from "../components/Badge.astro";
+import Card from "../components/Card.astro";
+import Icon from "../components/Icon.astro";
+import Link from "../components/Link.astro";
+import {
+  education,
+  experiences,
+  extracurriculars,
+  personal,
+  projects,
+  techStack,
+} from "../data/content";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Eray Yüklü" />
+<main
+  class="container mx-auto max-w-screen-sm md:pt-20 pt-12 pb-20 gap-8 flex flex-col selection:bg-cyan-700/50 selection:text-cyan-100"
+>
+  <section class="px-4">
+    <h1 class="text-2xl text-slate-800 dark:text-slate-200">
+      Hey! I'm Eray.
+    </h1>
+    <p class="text-md font-normal text-slate-500 mt-2">
+      Computer Engineering student at Boğaziçi University. I like systems
+      programming, cloud-native infrastructure, and turning messy pipelines
+      into something that just works.
+    </p>
+    <div class="flex flex-wrap gap-2 mt-4">
+      {techStack.map((item) => <Badge label={item} />)}
+    </div>
+    <hr class="border-slate-300 dark:border-slate-800 mt-6" />
+  </section>
+  <section class="flex flex-col gap-6 px-4">
+    <div
+      class="flex gap-3 items-center leading-6 text-slate-500 dark:text-slate-300"
+    >
+      <Icon name="experience" />
+      <h2 class="flex-1">Experience</h2>
+      <a
+        class="text-xs text-slate-500 dark:text-slate-300 hover:underline underline-offset-2 hover:text-cyan-700 dark:hover:text-cyan-400 flex gap-1 items-center"
+        href="/resume.pdf">Resume</a
+      >
+    </div>
+    <div class="flex flex-col gap-6">
+      {experiences.map((item) => <Card {...item} />)}
+    </div>
+    <hr class="border-slate-300 dark:border-slate-800" />
+  </section>
+  <section class="flex flex-col gap-6 px-4">
+    <div
+      class="flex gap-3 items-center leading-6 text-slate-500 dark:text-slate-300"
+    >
+      <Icon name="project" />
+      <h2>Projects</h2>
+    </div>
+    <div class="flex flex-col gap-6">
+      {projects.map((item) => <Card {...item} />)}
+    </div>
+    <hr class="border-slate-300 dark:border-slate-800" />
+  </section>
+  <section class="flex flex-col gap-6 px-4">
+    <div
+      class="flex gap-3 items-center leading-6 text-slate-500 dark:text-slate-300"
+    >
+      <Icon name="extracurricular" />
+      <h2>Extracurricular</h2>
+    </div>
+    <div class="flex flex-col gap-6">
+      {extracurriculars.map((item) => <Card {...item} />)}
+    </div>
+    <hr class="border-slate-300 dark:border-slate-800" />
+  </section>
+  <section class="flex flex-col gap-6 px-4">
+    <div
+      class="flex gap-3 items-center leading-6 text-slate-500 dark:text-slate-300"
+    >
+      <Icon name="education" />
+      <h2>Education</h2>
+    </div>
+    <div class="flex flex-col gap-6">
+      {education.map((item) => <Card {...item} />)}
+    </div>
+    <hr class="border-slate-300 dark:border-slate-800" />
+  </section>
+  <section class="flex flex-col gap-6 px-4">
+    <div
+      class="flex gap-3 items-center leading-6 text-slate-500 dark:text-slate-300"
+    >
+      <Icon name="personal" />
+      <h2>Interests</h2>
+    </div>
+    <div class="flex flex-col gap-6">
+      {personal.map((item) => <Card {...item} />)}
+    </div>
+    <hr class="border-slate-300 dark:border-slate-800" />
+  </section>
+  <section class="flex flex-col gap-6 px-4">
+    <div
+      class="flex gap-3 items-center leading-6 text-slate-500 dark:text-slate-300"
+    >
+      <Icon name="contact" />
+      <h2>Contact</h2>
+    </div>
+    <div
+      class="flex flex-wrap items-start gap-6 text-md text-slate-950 dark:text-slate-200 text-sm"
+    >
+      <Link title="Email" link="mailto:erayyuklu@gmail.com" />
+      <Link title="GitHub" link="https://github.com/erayyuklu" />
+      <Link
+        title="LinkedIn"
+        link="https://www.linkedin.com/in/erayyuklu/"
+      />
+    </div>
+    <hr class="border-slate-300 dark:border-slate-800" />
+  </section>
+</main>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const moreButton = document.querySelector('[data-more-button="true"]');
+    if (moreButton) {
+      moreButton.addEventListener("click", () => {
+        moreButton.textContent = "Seriously?";
+      });
+    }
+  });
+</script>

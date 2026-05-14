@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Portfolio of Eray Yüklü" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: "Innovator";
+    src: url("/innovator.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+  }
+  html {
+    font-family: "Innovator", sans-serif;
+    background: #f1f5f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    html {
+      background: #0d1117;
+    }
+  }
+</style>
