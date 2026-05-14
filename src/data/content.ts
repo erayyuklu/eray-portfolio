@@ -14,7 +14,7 @@ export const techStack = [
 	"Spring Boot",
 	"Unity",
 	"C#",
-	"+ more",
+	"+999 more...",
 ];
 
 export const experiences = [
@@ -28,6 +28,7 @@ export const experiences = [
 		title: "IQB Solutions",
 		label: "Aug 2024 — Sep 2024",
 		body: "Software Development Intern. Backend modules for relational database management, RESTful APIs, and token-based auth (JWT/OAuth2) using Java, Spring Boot, Maven and Postman.",
+		link: "https://www.iqb.com.tr",
 	},
 ];
 
