@@ -56,6 +56,11 @@ export const education = [
 		label: "3.25 / 4",
 		link: "https://bogazici.edu.tr/",
 	},
+	{
+		title: "Malatya Fen Lisesi",
+		body: "Science",
+		label: "99.69 / 100",
+	},
 ];
 
 export const personal = [
